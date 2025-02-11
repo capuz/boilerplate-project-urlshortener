@@ -20,7 +20,7 @@ app.get('/', function(req, res) {
 app.use(bodyParser.urlencoded({ extended: false }));
 
 // Conexión a MongoDB (Reemplaza con tu URL de conexión si usas un servicio externo)
-mongoose.connect("mongodb+srv://fcapuz:RNPGReCGwB9dGFTc@cluster0.olwwp.mongodb.net/test", {
+mongoose.connect(process.env.MONGO_URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 });
